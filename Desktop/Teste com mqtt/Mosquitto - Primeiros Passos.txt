@@ -1,0 +1,59 @@
+﻿Mosquitto
+
+O Mosquitto é basicamente constituído por 4 principais programas
+	- mosquitto.exe (broker)
+	- mosquitto_pub.exe (publish) relacionado a publicação
+	- mosquitto_sub.exe (subscribe) relacionado a publicação
+	- mosquitto_passwd.exe (gerar os rashs referentes as chaves - vai encriptar as senhas
+							para cada um dos usuários)
+	- mosquito.conf (As regras vão ser carregadas basicamente dentro desse arquivo)
+					(Arquivo de configuração de tudo que acontece dentro do nosso broker)
+					
+					
+Começando a trabalhar
+
+	mosquitto -v (v de verbose, serve para receber as mensagens de log)
+	
+	Ele inicia o serviço
+	
+	Após isso nos precisamos conectar nossos clientes ao broker, então precisa de mais um console
+	
+	
+	Assinando um tópico:
+		mosquitto_sub -h localhost -p 1883 -t "topico"
+		
+		Se tivesse usando outro computador, teria que usar o IP no lugar de localhost.
+		
+	Publicando num tópico:
+		mosquitto_pub -h localhost -p 1883 -t "topico" -m "45"
+		
+		Se tivesse usando outro computador, teria que usar o IP no lugar de localhost.
+		
+	
+	Assinando um tópico (Outro exemplo):
+		mosquitto_sub -h localhost -p 1883 -t "umidade" -q 2
+		
+		Se tivesse usando outro computador, teria que usar o IP no lugar de localhost.
+		
+		'-q 2' altera a Qualidade de Serviço para 2. Quanto maior esse numero, maior vai ser a
+		confiabilidade de chegada dos dados (entrega da mensagem).
+		
+	Publicando num tópico (Outro exemplo):
+		mosquitto_pub -h localhost -p 1883 -t "umidade" -m "12.67" -q 0
+		
+		'-q 0'. Qualidade de Serviço zero. Parecido com UDP
+		
+		
+	A Porta pode ser configurada no arquivo Conf
+		Portas padrões:
+			- 1883 (Sem SSL)
+			- 883  (Com SSL) - SLL precisa haver tanto do lado do server como do cliente
+			
+			
+			
+	Alguma vez um programa já pode ta rodando na prota especificada
+	Executar o seguindo comando:
+		- netstat -o -n -a (Para exibir porta e PID)
+		
+	Executar o seguinte comando:
+		- taskkill /PID (Para matar o processo com ese pID)
