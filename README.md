@@ -15,4 +15,4 @@ e fazendo o devido monitoramento dessas imagens.
   - Tornar a orientação da câmera independente do carro para facilitar o monitoramento do ambiente.
 
 - Smart Car - Montado
-  - ![Smart Car - Final](Smart Car.jpg)
+![Smart Car - Final](Smart Car.jpg)
