@@ -13,3 +13,6 @@ e fazendo o devido monitoramento dessas imagens.
   - Desenvolver uma forma para que se possa controlar o movimento do carro a grandes distâncias.
   - Utilizar visão computacional para a detecção de pessoas ou objetos.
   - Tornar a orientação da câmera independente do carro para facilitar o monitoramento do ambiente.
+
+- Smart Car - Montado
+  - ![Smart Car - Final](Smart Car.jpg)
