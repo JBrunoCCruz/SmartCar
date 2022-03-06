@@ -14,5 +14,6 @@ e fazendo o devido monitoramento dessas imagens.
   - Utilizar visão computacional para a detecção de pessoas ou objetos.
   - Tornar a orientação da câmera independente do carro para facilitar o monitoramento do ambiente.
 
-- Smart Car - Montado
-![Smart Car - Final](Smart Car.jpg)
+#### Smart Car - Montado
+
+![Smart Car - Final](https://github.com/JBrunoCCruz/SmartCar/blob/a5cd054d012cc1ce1764955af6675d52e5699afe/Smart%20Car.jpg)
